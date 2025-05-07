@@ -21,7 +21,13 @@ modules:
   
   # Install desired dnf packages
   - type: dnf
+    repos:
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode/config.repo
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
     install:
       packages:
-        - code                                    # VSCode
-        - fedora41-flashgbx-4.3-1.fc41.noarch.rpm  # FlashGBX
+        - code                                    
+        - fedora41-flashgbx-4.3-1.fc41.noarch.rpm
+  
