@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: bazzite-nvidia
+name: cobalt-bazzite
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
@@ -30,4 +30,11 @@ modules:
       packages:
         - code                                    
         - fedora41-flashgbx-4.3-1.fc41.noarch.rpm
-  
+
+  # Flatpacks
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      install:
+        - org.mozilla.firefox
