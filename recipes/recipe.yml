@@ -30,6 +30,18 @@ modules:
       packages:
         - code                                    
         - fedora41-flashgbx-4.3-1.fc41.noarch.rpm
+        
+  # brew install
+  - type: brew
+    nofile-limits: true # increase nofile limits
+    brew-analytics: false # disable telemetry
+    auto-upgrade: true
+    upgrade-interval: "7d"
+
+  # Install pyenv
+  - type: script
+    snippets:
+      - "curl -fsSL https://pyenv.run | bash"
 
   # Flatpacks
   - type: default-flatpaks
