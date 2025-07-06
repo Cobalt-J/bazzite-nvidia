@@ -5,5 +5,5 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-cat /etc/pyenv/pyenv_bashrc.conf > /etc/skel/.bashrc
-cat /etc/tmpfiles.d/general_set_bashrc.conf > /etc/skel/.bashrc
+cat /etc/bashrc-conf/pyenv_bashrc.conf >> /etc/skel/.bashrc
+cat /etc/bashrc-conf/general_set_bashrc.conf >> /etc/skel/.bashrc
