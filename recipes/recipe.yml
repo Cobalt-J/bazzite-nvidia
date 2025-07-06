@@ -42,6 +42,12 @@ modules:
   - type: script
     snippets:
       - "curl -fsSL https://pyenv.run | bash"
+      - "mv /root/.pyenv/* /etc/pyenv/"
+
+  # Set personalized bashrc file
+  - type: script
+    scripts:
+      - "bashrc_set.sh"
 
   # Flatpacks
   - type: default-flatpaks
